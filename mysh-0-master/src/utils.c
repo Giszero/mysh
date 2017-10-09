@@ -35,7 +35,6 @@ void mysh_parse_command(const char* command,
   
     char **arrs; // declare arrs with pointer of char pointer.
 	arrs = (char**)calloc(16, sizeof(char*)); // allocate 50*4bytes to arrs. it holds address of each string array.
-	int i;
 	for(i=0;i<16;i++) {
 		arrs[i] = (char*)calloc(sizeof(char),13); // allocate memory of each string
 		strcpy(arrs[i],"TEST PROGRAM");
