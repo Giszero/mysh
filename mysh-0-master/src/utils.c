@@ -12,10 +12,6 @@ int i,j = 0;
 
 char ch;
 
-printf("input");
-gets(command);
-
-
 for(i=0;i<strlen(command);i++)
 {
 ch = command[i];
