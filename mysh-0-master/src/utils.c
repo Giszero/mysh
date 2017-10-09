@@ -44,8 +44,8 @@ void mysh_parse_command(const char* command,
 	while(i<16) { // print and free.
 		printf("%x : %s", (int)arrs[i], arrs[i]);
 		free(arrs[i]);
+		i++;
 	}
-	free(arrs[i]); // free arrs.
   
   /*
     *argv = (char **)calloc(64, sizeof(char*)); // allocate space
