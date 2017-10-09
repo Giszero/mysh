@@ -35,7 +35,7 @@ void mysh_parse_command(const char* command,
        for(j=0; j<*argc ; j++)
        {
          printf("%s\n",ptr);
-         strncpy(argv[j],ptr,strlen(ptr));
+         strncpy(*argv[j],ptr,strlen(ptr));
          argv[j][strlen(ptr)] = '\0';
          ptr = strtok(NULL," ");
   
