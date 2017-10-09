@@ -25,16 +25,16 @@ void mysh_parse_command(const char* command,
 
     printf ("argc == %d \n", *argc);
   
-    char ***command != strtok(command, " ");
+    char *ptr = strtok(command, " ");
   
-    while(command != NULL)
+    while(ptr != NULL)
     {
        for(j=0; j<*argc ; j++)
        {
-         printf("&s\n",command);
-         strncpy(argv[j],command,strlen(command));
-         argv[j][strlen(command)] = '\0';
-         command = strtok(NULL," ");
+         printf("&s\n",ptr);
+         strncpy(argv[j],ptr,strlen(ptr));
+         argv[j][strlen(ptr)] = '\0';
+         ptr = strtok(NULL," ");
   
         }
   
