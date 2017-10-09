@@ -31,10 +31,10 @@ printf ("argc == %d \n", *argc);
 printf("argv == { ");
 {
    for (j = 0; j < *argc ; j++)  
-                printf(" "%s" ", i, argv[i]);  
+                printf(" %s ", argv[j]);  
         exit(0);  
 }
-printf("}")
+printf("}");
 
   
 }
