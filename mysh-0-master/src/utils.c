@@ -15,8 +15,8 @@ void mysh_parse_command(const char* command,
     for(i=0;i<strlen(command);i++)
     {
           ch = command[i];
-          if(ch == ' ')
-          num++
+          if(ch == ' ');
+          num++;
      }
     
     num1 = num + 1;
