@@ -3,6 +3,11 @@
 #include <string.h>
 #include <stdlib.h>
 
+void allocMemory(void ****ptr, int size)    // 반환값 없음, void 이중 포인터 매개변수 지정
+{
+    *ptr = malloc(size);    // void **ptr을 역참조하여 void *ptr에 메모리 할당
+}
+
 void mysh_parse_command(const char* command,
                         int *argc, char*** argv)
 {
@@ -31,7 +36,9 @@ void mysh_parse_command(const char* command,
     strncpy(temp_command, command, strlen(command));
     temp_command[strlen(command)] = '\0';
 */
-    argv = malloc(1024); // allocate space
+    //argv = malloc(1024); // allocate space
+    allocMemory(&argv, 1024);
+  
     char *ptr = strtok(command, " ");
     while(ptr != NULL)
     {
