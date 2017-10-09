@@ -15,25 +15,22 @@ char ch;
 printf("input");
 gets(command);
 
-  /*
+
 for(i=0;i<strlen(command);i++)
 {
 ch = command[i];
 if(ch == ' ')
 num++
 }
-num + 1 = num1;
-
-printf ("argc == %d \n", num1);
-
-*/
-
- // printf("argc == %d", argc);
+num1 = num + 1;
   
- 
+ *argc = num1;  
+
+printf ("argc == %d \n", *argc);
+
 printf("argv == { ");
 {
-   for (j = 0; j < argc; j++)  
+   for (j = 0; j < *argc ; j++)  
                 printf(" "%s" ", i, argv[i]);  
         exit(0);  
 }
