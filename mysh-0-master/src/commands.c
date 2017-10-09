@@ -15,7 +15,7 @@ int do_pwd(int argc, char** argv) {
 
   char buff[1024] = {0};
   
-  getcwd(buff, 1024) //save at buff
+  getcwd(buff, 1024) //save to buff
   printf( "작업 디렉토리: %s\n", buff);
   
   return 0;
