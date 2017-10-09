@@ -31,7 +31,7 @@ void mysh_parse_command(const char* command,
     strncpy(temp_command, command, strlen(command));
     temp_command[strlen(command)] = '\0';
 */
-    *argv = (char **)calloc(50, sizeof(char*)); // allocate space
+    *argv = (char **)calloc(64, sizeof(char*)); // allocate space
     for(i=0;i < 64;i++){
        *argv[i] = (char*)calloc(sizeof(char),16); // allocate memory of each string
     }
