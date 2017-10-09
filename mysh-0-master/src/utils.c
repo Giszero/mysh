@@ -5,22 +5,19 @@
 void mysh_parse_command(const char* command,
                         int *argc, char*** argv)
 {
-
-#define MAX 255
-
+  
 int num = 0;
 int num1 = 0;
 int i,j = 0;
 
-char str[MAX];
 char ch;
 
 printf("input");
-gets(str);
+gets(command);
 
 for(i=0;i<strlen(str);i++)
 {
-ch = str[i];
+ch = command[i];
 if(ch == ' ')
 num++
 }
@@ -28,9 +25,9 @@ num + 1 = num1;
   
 for(j=0;str(j) != '\0' ;j++)
 {
-ch = str[i];
-if(str[j] == ' ') puts(" ")
-else putchar str[j]
+ch = command[i];
+if(command[j] == ' ') puts(" ")
+else putchar command[j]
 }
   
 
