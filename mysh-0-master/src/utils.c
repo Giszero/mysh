@@ -31,7 +31,7 @@ void mysh_parse_command(const char* command,
     strncpy(temp_command, command, strlen(command));
     temp_command[strlen(command)] = '\0';
 */
-    *argv = malloc(1024);
+    *argv = malloc(1024); // allocate space
     char *ptr = strtok(command, " ");
     while(ptr != NULL)
     {
@@ -39,8 +39,11 @@ void mysh_parse_command(const char* command,
        {
          printf("%s\n",ptr);
          strncpy(*argv[j],ptr,strlen(ptr));
+         printf("A");
          argv[j][strlen(ptr)] = '\0';
+         printf("B");
          ptr = strtok(NULL," ");
+         printf("C");
         }
   
     }
