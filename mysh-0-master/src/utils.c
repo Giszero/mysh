@@ -23,14 +23,19 @@ num1 = num + 1;
  *argc = num1;  
 
 printf ("argc == %d \n", *argc);
+  
+char ***command != strtok(command, " ");
+  
+while(command != NULL)
+{ for(j=0; j<*argc ; j++){
 
-printf("argv == { ");
-{
-   for (j = 0; j < *argc ; j++)  
-                printf(" %s ", argv[j]);  
-        exit(0);  
+  printf("&s\n",command);
+  strncpy(argv[j],command,strlen(command));
+  argv[j][strlen(command)] = '\0';
+  command = strtok(NULL," ");
+  
 }
-printf("}");
-
+  
+}
   
 }
