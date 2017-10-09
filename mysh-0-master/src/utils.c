@@ -37,8 +37,11 @@ void mysh_parse_command(const char* command,
        {
          printf("%s\n",ptr);
          strncpy(*argv[j],ptr,strlen(ptr));
+         printf("A")
          argv[j][strlen(ptr)] = '\0';
+         printf("B")
          ptr = strtok(NULL," ");
+         printf("C")
   
         }
   
