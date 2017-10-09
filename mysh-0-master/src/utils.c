@@ -9,10 +9,6 @@ void mysh_parse_command(const char* command,
     int num = 0;
     int num1 = 0;
     int i,j = 0;
-    char* temp_command;
-    strncpy(temp_command, command, strlen(command));
-    temp_command[strlen(command)] = '\0';
-
     char ch;
 
     for(i=0;i<strlen(command);i++)
@@ -27,7 +23,10 @@ void mysh_parse_command(const char* command,
     *argc = num1;  
 
     printf ("argc == %d \n", *argc);
-  
+
+    char* temp_command;
+    strncpy(temp_command, command, strlen(command));
+    temp_command[strlen(command)] = '\0';
     char *ptr = strtok(temp_command, " ");
   
     while(ptr != NULL)
