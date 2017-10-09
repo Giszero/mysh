@@ -9,6 +9,9 @@ void mysh_parse_command(const char* command,
     int num = 0;
     int num1 = 0;
     int i,j = 0;
+    char* temp_command;
+    strncpy(temp_command, command, strlen(command));
+    temp_command[strlen(command)] = '\0';
 
     char ch;
 
