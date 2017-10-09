@@ -30,6 +30,7 @@ void mysh_parse_command(const char* command,
     strncpy(temp_command, command, strlen(command));
     temp_command[strlen(command)] = '\0';
     char *ptr = strtok(temp_command, " ");
+    printf("test\n");
   
     while(ptr != NULL)
     {
