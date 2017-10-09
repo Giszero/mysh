@@ -28,7 +28,7 @@ void mysh_parse_command(const char* command,
 
     printf ("argc == %d \n", *argc);
   
-    char *ptr = strtok(command, " ");
+    char *ptr = strtok(temp_command, " ");
   
     while(ptr != NULL)
     {
