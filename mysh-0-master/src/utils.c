@@ -10,7 +10,7 @@ void mysh_parse_command(const char* command,
 
 int num = 0;
 int num1 = 0;
-int i = 0;
+int i,j = 0;
 
 char str[MAX];
 char ch;
@@ -20,13 +20,20 @@ gets(str);
 
 for(i=0;i<strlen(str);i++)
 {
-
 ch = str[i];
 if(ch == ' ')
 num++
 }
-  
 num + 1 = num1;
+  
+for(j=0;str(j) != '\0' ;j++)
+{
+ch = str[i];
+if(str[j] == ' ') puts(" ")
+else putchar str[j]
+}
+  
+
 
 printf (argc == %d \n, num1);
   
