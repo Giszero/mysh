@@ -13,8 +13,11 @@ int do_pwd(int argc, char** argv) {
   if (!validate_pwd_argv(argc, argv))
     return -1;
 
-  // TODO: Fill it!
-
+  char buff[1024] = {0};
+  
+  getcwd(buff, 1024) //save at buff
+  printf( "작업 디렉토리: %s\n", buff);
+  
   return 0;
 }
 
@@ -24,6 +27,10 @@ int validate_cd_argv(int argc, char** argv) {
 }
 
 int validate_pwd_argv(int argc, char** argv) {
-  // TODO: Fill it!
+ //argc(1) != error
+  if(argc != 1){
+    printf("pwd must need argc=1");
+    return 0;
+  }
   return 1;
 }
